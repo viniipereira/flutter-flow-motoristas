@@ -13,6 +13,7 @@ class HomePageCopyWidget extends StatefulWidget {
 
 class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
   ScrollController? listViewController;
+  Stream<List<DadosMotoristasRecord>> motoristas = queryDadosMotoristasRecord();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
