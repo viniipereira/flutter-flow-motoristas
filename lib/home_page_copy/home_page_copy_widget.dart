@@ -4,6 +4,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../flutter_flow/custom_functions.dart';
 
 class HomePageCopyWidget extends StatefulWidget {
   const HomePageCopyWidget({Key? key}) : super(key: key);
@@ -24,7 +25,7 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
       await Future.delayed(const Duration(milliseconds: 2000));
       await listViewController?.animateTo(
         listViewController!.position.maxScrollExtent,
-        duration: Duration(milliseconds: 2500),
+        duration: Duration(milliseconds: scrollarTela(listViewDadosMotoristasRecordList.length)),
         curve: Curves.ease,
       );
     });
