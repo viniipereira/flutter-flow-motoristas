@@ -2,6 +2,7 @@ import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePageCopyWidget extends StatefulWidget {
@@ -13,12 +14,21 @@ class HomePageCopyWidget extends StatefulWidget {
 
 class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
   ScrollController? listViewController;
-  Stream<List<DadosMotoristasRecord>> motoristas = queryDadosMotoristasRecord();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      await Future.delayed(const Duration(milliseconds: 5000));
+      await listViewController?.animateTo(
+        listViewController!.position.maxScrollExtent,
+        duration: Duration(milliseconds: 2000),
+        curve: Curves.ease,
+      );
+    });
+
     listViewController = ScrollController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
