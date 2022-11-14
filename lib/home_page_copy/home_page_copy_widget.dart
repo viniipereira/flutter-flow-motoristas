@@ -4,6 +4,8 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../flutter_flow/custom_functions.dart';
+import '../flutter_flow/pegarDados.dart';
 
 class HomePageCopyWidget extends StatefulWidget {
   const HomePageCopyWidget({Key? key}) : super(key: key);
@@ -13,23 +15,49 @@ class HomePageCopyWidget extends StatefulWidget {
 }
 
 class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
+  int dado = 0;
   ScrollController? listViewController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
+  late double _scrollPosition;
+
+  _scrollListener() async {
+    setState(() {
+      _scrollPosition = listViewController!.position.pixels;
+    });
+
+    if (listViewController!.position.atEdge) {
+      if (listViewController!.position.pixels == 0) {
+      } else {
+        listViewController!.jumpTo(0);
+        int segundos = await NumeroDeRegistros().GetData();
+        await Future.delayed(const Duration(milliseconds: 2000));
+        listViewController?.animateTo(
+          listViewController!.position.maxScrollExtent,
+          duration: new Duration(milliseconds: scrollarTela(segundos)),
+          curve: Curves.ease,
+        );
+      }
+    }
+  }
+
   @override
   void initState() {
+    listViewController = ScrollController();
+    listViewController?.addListener(_scrollListener);
+
     super.initState();
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      await Future.delayed(const Duration(milliseconds: 5000));
+      int teste = await NumeroDeRegistros().GetData();
+      await Future.delayed(const Duration(milliseconds: 1000));
       await listViewController?.animateTo(
         listViewController!.position.maxScrollExtent,
-        duration: Duration(milliseconds: 2000),
+        duration: Duration(milliseconds: scrollarTela(teste)),
         curve: Curves.ease,
       );
     });
 
-    listViewController = ScrollController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -282,17 +310,24 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                             listViewDadosMotoristasRecordList = snapshot.data!;
                         return InkWell(
                           onTap: () async {
+                            int registros = listViewDadosMotoristasRecordList
+                                .length
+                                .toInt();
                             await listViewController?.animateTo(
                               listViewController!.position.maxScrollExtent,
-                              duration: Duration(milliseconds: 2000),
+                              duration: Duration(
+                                  milliseconds: scrollarTela(registros)),
                               curve: Curves.ease,
                             );
                           },
                           child: RefreshIndicator(
                             onRefresh: () async {
+                              int dados =
+                                  listViewDadosMotoristasRecordList.length;
                               await listViewController?.animateTo(
                                 listViewController!.position.maxScrollExtent,
-                                duration: Duration(milliseconds: 2500),
+                                duration:
+                                    Duration(milliseconds: scrollarTela(dados)),
                                 curve: Curves.ease,
                               );
                             },
