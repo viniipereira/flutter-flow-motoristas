@@ -10,13 +10,13 @@ import '../backend/backend.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../../auth/auth_util.dart';
 
-double scrollarTela(List<int> registros) {
+int scrollarTela(int registros) {
   double segundos = 0;
-  if (registros.length >= 100) {
-    segundos = (registros.length / 100) * 200000;
+  if (registros >= 100) {
+    segundos = (registros / 100) * 200000;
   } else {
-    segundos = (registros.length % 100) * 2000;
+    segundos = (registros % 100) * 2000;
   }
   print(segundos);
-  return segundos;
+  return segundos.toInt();
 }
