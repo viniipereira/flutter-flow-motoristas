@@ -8,6 +8,7 @@ import 'lat_lng.dart';
 import 'place.dart';
 import '../backend/backend.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import '../../auth/auth_util.dart';
 
 double scrollarTela(List<int> registros) {
   double segundos = 0;
