@@ -50,13 +50,15 @@ class _LoginWidgetState extends State<LoginWidget> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 150, 0, 0),
-                    child: Image.asset(
-                      'assets/images/logo.png',
-                      width: 400,
-                      height: 300,
-                      fit: BoxFit.cover,
+                  Expanded(
+                    child: Align(
+                      alignment: AlignmentDirectional(0, 0),
+                      child: Image.asset(
+                        'assets/images/logo.png',
+                        width: 400,
+                        height: 300,
+                        fit: BoxFit.contain,
+                      ),
                     ),
                   ),
                 ],
@@ -67,14 +69,17 @@ class _LoginWidgetState extends State<LoginWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SelectionArea(
-                        child: Text(
-                      'Painel de Carregamento',
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Poppins',
-                            fontSize: 30,
-                          ),
-                    )),
+                    Expanded(
+                      child: SelectionArea(
+                          child: Text(
+                        'Painel de Carregamento',
+                        textAlign: TextAlign.center,
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'Poppins',
+                              fontSize: 30,
+                            ),
+                      )),
+                    ),
                   ],
                 ),
               ),
@@ -274,7 +279,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                       },
                       text: 'Login',
                       options: FFButtonOptions(
-                        width: 150,
+                        width: 200,
                         height: 50,
                         color: Color(0xFF1CAC07),
                         textStyle:
@@ -301,16 +306,22 @@ class _LoginWidgetState extends State<LoginWidget> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 250, 0, 0),
-                      child: SelectionArea(
-                          child: Text(
-                        'Copyrigh© Agraria 2022-2022',
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Poppins',
-                              color: FlutterFlowTheme.of(context).secondaryText,
-                            ),
-                      )),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                        child: SelectionArea(
+                            child: Text(
+                          'Copyrigh© Agraria 2022-2022',
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.of(context)
+                              .bodyText1
+                              .override(
+                                fontFamily: 'Poppins',
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                              ),
+                        )),
+                      ),
                     ),
                   ],
                 ),
