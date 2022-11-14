@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>700872837193-aa2op99r91rl6h15d9glptm9of58s85u.apps.googleusercontent.com</string>
+	<string>517419486566-s2fkjb91jb1f78rusn1e5ud0bvti587r.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.700872837193-aa2op99r91rl6h15d9glptm9of58s85u</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>700872837193-fjrril8v8rvnvfcironor6rlrnurmhl3.apps.googleusercontent.com</string>
+	<string>com.googleusercontent.apps.517419486566-s2fkjb91jb1f78rusn1e5ud0bvti587r</string>
 	<key>API_KEY</key>
-	<string>AIzaSyA803FXPzndWrk8OZCYaPi48SV8qkoTu7g</string>
+	<string>AIzaSyD09jnKLgxqFaw7kIs8CdDy6pTyVP5EtY4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>700872837193</string>
+	<string>517419486566</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.mycompany.telamaltaria</string>
 	<key>PROJECT_ID</key>
-	<string>dados-motoristas</string>
+	<string>dados-d7024</string>
 	<key>STORAGE_BUCKET</key>
-	<string>dados-motoristas.appspot.com</string>
+	<string>dados-d7024.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:700872837193:ios:ef6a786e0d38cbf2fe1798</string>
+	<string>1:517419486566:ios:9230a089dec2323d1c8ca7</string>
 </dict>
 </plist>

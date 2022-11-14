@@ -1,45 +1,37 @@
 {
   "project_info": {
-    "project_number": "700872837193",
-    "project_id": "dados-motoristas",
-    "storage_bucket": "dados-motoristas.appspot.com"
+    "project_number": "517419486566",
+    "project_id": "dados-d7024",
+    "storage_bucket": "dados-d7024.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:700872837193:android:a3a212fcc681a6a5fe1798",
+        "mobilesdk_app_id": "1:517419486566:android:4855a9db2cee70401c8ca7",
         "android_client_info": {
           "package_name": "com.mycompany.telamaltaria"
         }
       },
       "oauth_client": [
         {
-          "client_id": "700872837193-fjrril8v8rvnvfcironor6rlrnurmhl3.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.mycompany.telamaltaria",
-            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
-          }
-        },
-        {
-          "client_id": "700872837193-e55s35t3ls15t2pls7gu94tt1r46ds77.apps.googleusercontent.com",
+          "client_id": "517419486566-fm1ngfla2lspoahbcfu4a3nnbsmmk68i.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCRbEH9-Xwzl1OWu5bx5cz9CItQ3UGPEt8"
+          "current_key": "AIzaSyBPhKYKs34wKxKdccGWc9y7ELd-hxG6d3M"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "700872837193-e55s35t3ls15t2pls7gu94tt1r46ds77.apps.googleusercontent.com",
+              "client_id": "517419486566-fm1ngfla2lspoahbcfu4a3nnbsmmk68i.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "700872837193-aa2op99r91rl6h15d9glptm9of58s85u.apps.googleusercontent.com",
+              "client_id": "517419486566-s2fkjb91jb1f78rusn1e5ud0bvti587r.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.mycompany.telamaltaria"
